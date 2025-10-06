@@ -4,179 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Cinema Stuff</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
-      color: #222;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    nav {
-      background-color: white;
-      border-bottom: 1px solid #eee;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      margin: 0.5rem 1rem;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: white;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p.description {
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
-    }
-
-    iframe.main-video {
-      width: 100%;
-      height: 500px;
-      margin-bottom: 3rem;
-      border-radius: 12px;
-    }
-
-    .featured-video-title {
-      font-size: 2rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .portfolio-section h2 {
-      font-size: 2rem;
-      margin-top: 4rem;
-      margin-bottom: 1rem;
-    }
-
-    .portfolio-section p.description {
-      margin-bottom: 2rem;
-    }
-
-    .portfolio-item {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .portfolio-video {
-      width: 100%;
-      height: 300px;
-      border-radius: 12px;
-    }
-
-    .projectes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .portfolio-description {
-      font-size: 1rem;
-    }
-
-    .contact {
-      border-top: 1px solid #ccc;
-      padding-top: 2rem;
-      font-size: 0.95rem;
-    }
-
-    .social-links a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #222;
-    }
-
-    details summary {
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        margin: 0.5rem 0;
-      }
-      iframe.main-video {
-        height: 250px;
-      }
-      .portfolio-video {
-        height: 200px;
-      }
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
-    <a href="#portfolio">Portfoli</a>
+    <a id="estic" index.html">Home</a>
+    <a href="trailers.html">Tràilers</a>
+    <a href="curts.html">Curts</a>
+    <a href="muntatges_musicals.html">Muntatges musicals</a>
     <a href="#contact">Contacte</a>
   </nav>
 
-  <div class="container">
-    <section id="about">
+  <section id="home_about">
+    <div class="home_content">
       <h1>My Cinema Stuff</h1>
       <p class="description">Sóc estudiant de l'escola de cine Barcelona Cinema School & Actors Studio, especialitzat en la postproducció de video amb Premiere Pro. My Cinema Stuff està dedicat a l'edició de video en format curt, com curtmetratges, tràilers, muntatges musicals i en un futur potser publicitat.</p>
+    </div>
+    <video autoplay muted loop playsinline class="background-video"><source src="Peak.mp4" type="video/mp4"></video>
+  </section>
 
-      <h2 class="featured-video-title">El meu video preferit</h2>
-      <iframe class="main-video" src="https://www.youtube.com/embed/irwHQ_pBOss" frameborder="0" allowfullscreen></iframe>
-    </section>
+  <div class="container">
+    <h2 class="featured-video-title">El meu video preferit</h2>
+    <iframe class="main-video" src="https://www.youtube.com/embed/irwHQ_pBOss" frameborder="0" allowfullscreen></iframe>
 
     <section id="portfolio" class="portfolio-section">
-      <h2>Portfoli</h2>
-      <p class="description">Una petita mostra dels projectes amateur fets fins al moment, i també una petita recopilació de projectes personals no profesionals, però que mostren la meva habilitat rítmica i el que em defineix més.</p>
-
-      <div class="portfolio">
-        <div class="portfolio-item">
-          <iframe class="portfolio-video" src="https://www.youtube.com/embed/FK8rBi6cRSU" frameborder="0" allowfullscreen></iframe>
-          <p class="portfolio-description">Versió pròpia d'un curt a partir del material original</p>
-        </div>
-        <div class="portfolio-item">
-          <iframe class="portfolio-video" src="https://www.youtube.com/embed/OrJn584zMtY" frameborder="0" allowfullscreen></iframe>
-          <p class="portfolio-description">Curt propi, enfocat en l'edició i efectes visuals</p>
-        </div>
-        <div class="portfolio-item">
-          <iframe class="portfolio-video" src="https://www.youtube.com/embed/OqeFW3pZcHo" frameborder="0" allowfullscreen></iframe>
-          <p class="portfolio-description">Petit remake d'algunes escenes de la història del Chandler y la Mònica y de quan els seus amics s'enteren de la seva relació</p>
-        </div>
-        <div class="portfolio-item">
-          <iframe class="portfolio-video" src="https://www.youtube.com/embed/Md3WIBRg0lA" frameborder="0" allowfullscreen></iframe>
-          <p class="portfolio-description">Plà secuència de comèdia</p>
-        </div>
+      
 
         <h2>Projectes personals</h2>
         <p class="portfolio-description">Una mostra de la meva habilitat rítmica. No són vídeos acadèmics però és el que més em defineix.</p>
@@ -201,11 +53,11 @@
             <div class="portfolio-item"><iframe class="portfolio-video" src="https://www.youtube.com/embed/igXDeDoAY0U" frameborder="0" allowfullscreen></iframe></div>
           </div>
         </details>
-      </div>
+      
     </section>
 
     <section id="contact" class="contact">
-      <p>Contacto: mycinemastuff@gmail.com</p>
+      <p>Contacte: mycinemastuff@gmail.com</p>
       <div class="social-links">
         <a href="https://www.instagram.com/neilsquad_edits?igsh=cG5ubmgwaTI1NXpy" target="_blank">Instagram</a>
         <a href="https://www.youtube.com/@MyCinemaStuff" target="_blank">Curts</a>
